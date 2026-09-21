@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudsFolio - Edzl Renzo M. Escoto</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --accent-color: #333333;
+            --card-bg: #f8f9fa;
+            --border-color: #e0e0e0;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .btn-contact {
+            border: 1px solid var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-contact:hover {
+            background-color: var(--text-color);
+            color: #fff;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin: 40px 0 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+        }
+
+        .bio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        @media (min-width: 600px) {
+            .bio-container {
+                flex-direction: row;
+            }
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .bio-text p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 60px 0 30px 0;
+        }
+
+        /* Skills Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        @media (min-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list > li {
+            margin-bottom: 12px;
+        }
+
+        .skill-list strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .skill-list ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        .skills-img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Projects Section */
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .project-img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Footer / Contact */
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .footer-left h2 {
+            font-size: 1.8rem;
+            max-width: 200px;
+        }
+
+        .footer-right {
+            text-align: left;
+        }
+
+        @media (min-width: 600px) {
+            .footer-right {
+                text-align: right;
+            }
+        }
+
+        .footer-right h4 {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .footer-right a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .footer-right a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="brand-name">Escoto, Edzl Renzo</div>
+            <a href="#contact" class="btn-contact">Work with me</a>
+        </header>
+
+        <!-- Main Title & Hero -->
+        <section class="hero">
+            <h1>BudsFolio</h1>
+            <div class="bio-container">
+                <div class="bio-text">
+                    <h2>I'm Edzl Renzo M. Escoto, an Information technology student from Angeles University Foundation, currently at 3rd year.</h2>
+                    <p>Aspiring web developer passionate about crafting responsive and user-friendly websites.</p>
+                </div>
+                <!-- Replace src with your profile image path or URL -->
+                <img src="https://via.placeholder.com/180" alt="Edzl Renzo M. Escoto" class="profile-img">
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <h2 class="section-title">SKILLS</h2>
+        <div class="skills-grid">
+            <div>
+                <ul class="skill-list">
+                    <li>
+                        <strong>Technical Skills</strong>
+                        <ul>
+                            <li><strong>Programming Languages:</strong> C++, Java, JavaScript, HTML, CSS, C, Python</li>
+                            <li><strong>Frameworks:</strong> Laravel, Vue</li>
+                            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                            <li><strong>Tools/Platforms:</strong> Git/GitHub, VS Code</li>
+                            <li><strong>Agile Methodology:</strong> Familiarity with Agile frameworks (e.g., Scrum, Kanban board)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/350x220" alt="Technical Skills" class="skills-img">
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <h2 class="section-title">SKILLS</h2>
+        <div class="skills-grid">
+            <div>
+                <ul class="skill-list">
+                    <li>
+                        <strong>Soft skills</strong>
+                        <ul>
+                            <li>Problem Solving</li>
+                            <li>Leadership</li>
+                            <li>Communication</li>
+                            <li>Time management</li>
+                            <li>Attention to detail</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/350x220" alt="Soft Skills" class="skills-img">
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>NXTGen Games</h3>
+            <p>An e-commerce store platform for video game accounts and top-ups.</p>
+            <img src="https://via.placeholder.com/500x250" alt="NXTGen Games Preview" class="project-img">
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>Double-Check</h3>
+            <p>An educational game that tests user's critical thinking skills.</p>
+            <img src="https://via.placeholder.com/500x250" alt="Double-Check Preview" class="project-img">
+        </div>
+
+        <!-- Project 3: SecurX -->
+        <div class="project-card">
+            <h3>SecurX</h3>
+            <p>A cybersecurity and authentication management system designed for secure access and monitoring.</p>
+            <img src="https://via.placeholder.com/500x250" alt="SecurX Preview" class="project-img">
+        </div>
+
+        <!-- Contact / Footer -->
+        <footer id="contact">
+            <div class="footer-left">
+                <h2>Let's Create Together</h2>
+            </div>
+            <div class="footer-right">
+                <h4>Follow me on my socials!</h4>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+
+                <h4 style="margin-top: 15px;">Reach out for a collab!</h4>
+                <a href="mailto:escoto.edzlrenzo@auf.edu.ph">escoto.edzlrenzo@auf.edu.ph</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
