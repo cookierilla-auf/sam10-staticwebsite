@@ -122,17 +122,9 @@
         }
 
         /* Skills Layout */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            align-items: center;
-        }
-
-        @media (min-width: 600px) {
-            .skills-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        .skills-container {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .skill-list {
@@ -145,22 +137,15 @@
 
         .skill-list strong {
             display: block;
-            font-size: 1rem;
-            margin-bottom: 4px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
         .skill-list ul {
             list-style-type: disc;
             padding-left: 20px;
             color: #444;
-            font-size: 0.9rem;
-        }
-
-        .skills-img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
         }
 
         /* Projects Section */
@@ -257,53 +242,43 @@
                     <h2>I'm Edzl Renzo M. Escoto, an Information technology student from Angeles University Foundation, currently at 3rd year.</h2>
                     <p>Aspiring web developer passionate about crafting responsive and user-friendly websites.</p>
                 </div>
-                <!-- Replace src with your profile image path or URL -->
-                <img src="https://via.placeholder.com/180" alt="Edzl Renzo M. Escoto" class="profile-img">
+                <!-- Profile Image -->
+                <img src="Screenshot 2026-09-21 173917.png" alt="Edzl Renzo M. Escoto" class="profile-img">
             </div>
         </section>
 
         <!-- Technical Skills -->
         <h2 class="section-title">SKILLS</h2>
-        <div class="skills-grid">
-            <div>
-                <ul class="skill-list">
-                    <li>
-                        <strong>Technical Skills</strong>
-                        <ul>
-                            <li><strong>Programming Languages:</strong> C++, Java, JavaScript, HTML, CSS, C, Python</li>
-                            <li><strong>Frameworks:</strong> Laravel, Vue</li>
-                            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
-                            <li><strong>Tools/Platforms:</strong> Git/GitHub, VS Code</li>
-                            <li><strong>Agile Methodology:</strong> Familiarity with Agile frameworks (e.g., Scrum, Kanban board)</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/350x220" alt="Technical Skills" class="skills-img">
-            </div>
+        <div class="skills-container">
+            <ul class="skill-list">
+                <li>
+                    <strong>Technical Skills</strong>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> C++, Java, JavaScript, HTML, CSS, C, Python</li>
+                        <li><strong>Frameworks:</strong> Laravel, Vue</li>
+                        <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                        <li><strong>Tools/Platforms:</strong> Git/GitHub, VS Code</li>
+                        <li><strong>Agile Methodology:</strong> Familiarity with Agile frameworks (e.g., Scrum, Kanban board)</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <!-- Soft Skills -->
         <h2 class="section-title">SKILLS</h2>
-        <div class="skills-grid">
-            <div>
-                <ul class="skill-list">
-                    <li>
-                        <strong>Soft skills</strong>
-                        <ul>
-                            <li>Problem Solving</li>
-                            <li>Leadership</li>
-                            <li>Communication</li>
-                            <li>Time management</li>
-                            <li>Attention to detail</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/350x220" alt="Soft Skills" class="skills-img">
-            </div>
+        <div class="skills-container">
+            <ul class="skill-list">
+                <li>
+                    <strong>Soft skills</strong>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Leadership</li>
+                        <li>Communication</li>
+                        <li>Time management</li>
+                        <li>Attention to detail</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <!-- Projects -->
@@ -313,21 +288,21 @@
         <div class="project-card">
             <h3>NXTGen Games</h3>
             <p>An e-commerce store platform for video game accounts and top-ups.</p>
-            <img src="https://via.placeholder.com/500x250" alt="NXTGen Games Preview" class="project-img">
+            <img src="White Black and Orange Illustrative Design Portfolio and Resume Website.png" alt="NXTGen Games Preview" class="project-img">
         </div>
 
         <!-- Project 2 -->
         <div class="project-card">
             <h3>Double-Check</h3>
             <p>An educational game that tests user's critical thinking skills.</p>
-            <img src="https://via.placeholder.com/500x250" alt="Double-Check Preview" class="project-img">
+            <img src="Screenshot 2026-09-21 174038.png" alt="Double-Check Preview" class="project-img">
         </div>
 
         <!-- Project 3: SecurX -->
         <div class="project-card">
             <h3>SecurX</h3>
             <p>A cybersecurity and authentication management system designed for secure access and monitoring.</p>
-            <img src="https://via.placeholder.com/500x250" alt="SecurX Preview" class="project-img">
+            <img src="73847acc87d27ee3956bae2c2cc5b335.jpg" alt="SecurX Preview" class="project-img">
         </div>
 
         <!-- Contact / Footer -->
